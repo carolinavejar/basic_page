@@ -1,0 +1,126 @@
+<html>  <!-- SE UTILIZA PARA ABRIR -  INICIAR UN HTML -->
+<head>  <!-- VA DESPUES ABRIR HTML Y CONTIENE ELEMENTOS QUE SE DEBEN CARGAR AL INICIAR LA PAGINA, EJEMPLO ESTILOS  -->
+   
+    <title>Formulario</title> <!-- TITLE ES EL NOMBRE QUE SE MUESTRA EN LA PESTAÑA DEL NAVEGADOR -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> <!-- LINK REEL STYLE SHEET SIRVE PARA IMPORTAR ARCHIVOS CSS -->
+</head>
+
+ <!-- ELEMENTOS MAS COMUNES QUE SE USAN DENTRO DE LAS ETIQUETAS HTML SON 
+
+        *** CLASS = PARA DEFINIR UN NOMBRE EN COMUN PARA VARIOS ELEMENTOS,
+        GENERALMENTE SE USA PARA APLICAR ESTILOS COMUNES ENTRE DIFERENTES ELEMENTOS  
+            SE PUEDE DEFINIR MAS DE UNA CLASE POR ELEMENTO , SEPARADO POR ESPACIOS
+
+        *** ID = SE COLOCA PARA DEFINIR UN IDENTIFICADOR ÚNICO PARA LOS ELEMENTOS HTML
+-->
+
+<body> <!-- VA DESPUES DE HEAD Y CONTIENE EL CONTENIDO DE LA PAGINA  -->
+    
+   
+    <div class="container clase2">  <!-- DIV ES UNA SECCION EN HTML -->
+
+        <h2>Formulario envío</h2>    <!-- H1 H2 H3 H4 H5   SE UTILIZAN PARA ESCRIBIR TEXTOS "DESTACADOS", EJEMPLO TITULOS 
+                                        (H1 ES DE MAYOR TAMAÑO Y ASI VA DISMINUYENDO)-->
+
+        <h4>Información persona</h4>
+
+        <div class="row"> 
+            <div class="row">
+                <div class="input-field col s6">
+                    
+                    <input placeholder="Escriba su nombre" id="txtNombre" type="text">  <!--  INPUT ES UN ELEMENTO DE HTML QUE ES UNA CAJA DE TEXTO -->
+                    <label for="txtNombre">Nombre</label>  <!--  LABEL ES UN ELEMENTO DE HTML QUE SE USA PARA ESCRIBIR ALGO, NO SE PUEDE EDITAR -->
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Escriba su apellido" id="txtApellidoP" type="text">
+                    <label for="txtApellidoP">Apellido paterno</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Escriba su apellido" id="txtApellidoM" type="text">
+                    <label for="txtApellidoM">Apellido materno</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Escriba su edad" id="txtEdad" type="text">
+                    <label for="txtEdad">Edad</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Escriba su correo" id="txtCorreo" type="text">
+                    <label for="txtCorreo">Correo</label>
+                </div>
+            </div>
+
+        </div>
+
+
+        <h4>Información domicilio</h4>
+        <div class="nueva">
+            <div class="input-field col s6">
+                <input placeholder="Escriba su dirección" id="txtDirección" type="text">
+                <label for="txtDirección">Dirección</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Escriba su dirección" id="txtDirección" type="text">
+                    <label for="txtDirección">Dirección</label>
+                </div>
+                <div class="input-field col s6">
+                    <select id="selComuna"> <!--  SELECT ES UN ELEMENTO DE HTML QUE SE USA PARA MOSTRAR UNA LISTA DE OPCIONES DESPLEGABLES -->
+                        <option value="">Seleccione su comuna</option>  <!-- OPTIONS SON LAS OPCIONES DISPONIBLES DEL SELECT "VAN DENTRO DE SELECT" -->
+                        <option value="Renca">Renca</option>
+                        <option value="Maipú">Maipú</option>
+                        <option value="Santiago">Santiago</option>
+                    </select>
+                    <label>Comuna</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Escriba su apellido" id="txtApellidoM" type="text">
+                    <label for="txtApellidoM">Apellido materno</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Escriba su edad" id="txtEdad" type="text">
+                    <label for="txtEdad">Edad</label>
+                </div>
+            </div>
+        </div>
+
+
+        <h4>Información adicional</h4>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="txtInfoAdicional" class="materialize-textarea"></textarea> <!--  TEXTAREA ES UN ELEMENTO DE HTML QUE SE USA PARA MOSTRAR UNA CAJA DE TEXTO QUE PUEDE TENER VARIAS LINEAS -->
+                <label for="txtInfoAdicional">Información adicional</label>
+            </div>
+            </div>
+
+            <button></button>
+            <a hreh="www.google.cl">ir a google</a>
+        <a onclick="creaPersona()" class="waves-effect waves-light btn">Mostrar datos</a> <!--  A SE USA PARA COLOCAR ENLACES, PERO EN ESTE CASO SE ESTA USANDO COMO BOTON-->
+    </div>
+
+    <!-- LA ETIQUETA SCRIPT CON "SRC" SIRVE PARA IMPORTAR ARCHIVOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/app.js"></script>
+
+    <!-- LA ETIQUETA SCRIPT SOLA SIRVE PARA ISERTAR JS DIRECTO EN EL HTML -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+</body>
+
+</html>

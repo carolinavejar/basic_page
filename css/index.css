@@ -1,0 +1,19 @@
+/* . PARA DEFINIR ESTILO PARA CLASES */
+/* # PARA DEFINIR ESTILO PARA ID */
+/* "SIN NADA" PARA COLOCAR DIRECTAMENTE UNA ETIQUETA (COMO HEAD O BODY) */
+
+head {
+    background-color: blue;
+}
+
+.clase2 {
+    background-color: red;
+}
+
+.input-field {
+    font-size: 20px;
+}
+
+.row .input-field {
+    
+}
